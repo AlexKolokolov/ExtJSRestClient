@@ -5,12 +5,6 @@ Ext.define('ExtJSRestClient.store.DepartmentStore', {
         proxy: {
             type: 'rest',
             url: 'http://localhost:8080/SimpleProject/webapi/departments/1'
-        },
-        listeners: {
-            beforeload: function () {
-                var name = document.location.search.slice(1);
-                this.getProxy().setExtraParam('name', name);
-            }
         }
     }
 });
